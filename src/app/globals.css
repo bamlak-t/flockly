@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --background: #ffffff;
+  --foreground: #d6d3d3;
+}
+
+@media (prefers-color-scheme: white) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #ededed;
+  }
+}
+
+body {
+  color: var(--foreground);
+  background: var(--background);
+  font-family: Gilroy, Arial, Helvetica, sans-serif;
+}
+
+.filterable:hover {
+  @apply bg-zinc-800;
+}
+
+.node-row:hover {
+  @apply bg-zinc-800;
+}
+
+.selected {
+  @apply text-yellow-500 font-bold border-b-4 border-yellow-500;
+}
+
+.radio-button {
+  @apply text-gray-400 font-bold border-gray-500;
+}
+.radio-button:hover {
+  @apply rounded-lg;
+}
+
+.node-table-cell {
+  @apply w-28;
+}
+
+.additional-info-cell {
+  @apply w-full h-fit py-5 rounded-xl justify-center items-center text-center font-bold;
+}
+
+.additional-info-cell:hover {
+  @apply bg-zinc-800 text-yellow-500;
+}
+
+.clipboard-button:hover {
+  @apply stroke-FlockBlue;
+}
+
+@keyframes scroll-left {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+.scroll-text {
+  animation: scroll-left 20s linear infinite;
+}
+
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../public/Gilroy Font/gilroy-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gilroy";
+  src: url("../../public/Gilroy Font/gilroy-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
